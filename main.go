@@ -86,13 +86,13 @@ func main() {
 	app.Name = "javago"
 	app.Usage = "Java binding generator for Go"
 	app.Flags = []cli.Flag{
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:        "classpath",
 			Value:       "*:.",
 			Usage:       "Specifies the path the javap command uses to look up classes.",
 			Destination: &classpath,
 		},
-		cli.StringFlag{
+		&cli.StringFlag{
 			Name:        "classfile",
 			Value:       "",
 			Usage:       "classfile",
